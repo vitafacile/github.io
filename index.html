@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vita Facile - Упростите Свою Жизнь</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-area">
+                <img src="images/1212.png" alt="Vita Facile Logo" class="logo-image">
+            </div>
+            <nav class="nav">
+                <a href="#home">Главная</a>
+                <a href="#features">Возможности</a>
+                <a href="#" id="openPricingNavBtn">Цены</a> 
+                <a href="#" id="openSupportModalBtn">Поддержка</a> 
+            </nav>
+            <div class="cta-area">
+                <a href="#" id="openDownloadModalBtn" class="btn btn-primary">Скачать</a> 
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Упростите свою жизнь с Vita Facile.</h1>
+                <p>Единое решение для управления вашими финансами, задачами и организации личной жизни.</p>
+                <div class="hero-actions">
+                    <button id="openPricingHeroBtn" class="btn btn-gradient">Цены</button> 
+                </div>
+            </div>
+
+            <div class="hero-images">
+                <img src="images/telefon.png" alt="Мобильная версия Vita Facile" class="device-phone">
+                <img src="images/comp.png" alt="Десктопная версия Vita Facile" class="device-desktop">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Ключевые Возможности</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Управление Финансами</h3>
+                    <p>Легко отслеживайте доходы и расходы, планируйте бюджет.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Список Задач</h3>
+                    <p>Управляйте ежедневными задачами и никогда не забывайте о важном.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Отслеживание Прогресса</h3>
+                    <p>Визуализируйте свои достижения и рост с течением времени.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vita Facile. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="download">&times;</span>
+            <h2>Выберите платформу для скачивания</h2>
+            <div class="download-options">
+                <button class="btn btn-modal" onclick="alert('Скачивание для Телефона...');">
+                    Телефон
+                </button>
+                <button class="btn btn-modal" onclick="alert('Скачивание для Компьютера...');">
+                    Компьютер
+                </button>
+            </div>
+            <p class="modal-info">Vita Facile доступен для iOS, Android и Windows/macOS.</p>
+        </div>
+    </div>
+
+    <div id="pricingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="pricing">&times;</span>
+            <h2>Выберите Свой План Vita Facile</h2>
+            
+            <div class="pricing-modal-grid">
+                <div class="plan-item-modal">
+                    <h3>Подписка</h3>
+                    <p class="price">550 ₸<span class="period"> / Месяц</span></p>
+                    <ul>
+                        <li>✅ Учет до 100 транзакций</li>
+                        <li>✅ Базовый список задач</li>
+                    </ul>
+                    <a href="#" id="openSuccessImageBtn" class="btn btn-primary">Подключить</a>
+                </div>
+
+                <div class="plan-item-modal featured">
+                    <h3>Аренда сервера</h3>
+                    <p class="price">150 ₸<span class="period"> / Месяц</span></p>
+                    <ul>
+                        <li>✅ Неограниченно транзакций</li>
+                        <li>✅ Продвинутая аналитика</li>
+                    </ul>
+                    <a href="#" id="openBuyImageBtn" class="btn btn-gradient">Купить</a>
+                </div>
+            </div>
+            <p class="modal-info">Полное сравнение функций смотрите в разделе Цены.</p>
+        </div>
+    </div>
+
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="support">&times;</span>
+            <h2>Свяжитесь с нами</h2>
+            
+            <div class="contact-info">
+                <p>📧 Email: <a href="mailto:support@vitafacile.kz">support@vitafacile.kz</a></p>
+                <p>📞 Телефон: <a href="tel:+77084868423">+7 (708) 486-84-23</a></p>
+            </div>
+            
+            <p class="separator">Или напишите нам в социальных сетях:</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/shekt1baev12?igsh=MWI0dXU5NW1wdjlhYg%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                
+                <a href="https://wa.me/77084868423" target="_blank" class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                
+                <a href="https://t.me/VitaFacilecb_bot" target="_blank" class="social-icon telegram">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+            </div>
+            
+            <p class="modal-info">Мы ответим в течение рабочего дня.</p>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close-button" data-modal="image">&times;</span>
+            <h2>Заявка успешно отправлена!</h2>
+            <img src="images/kaspi.png" alt="Успешное подключение" class="modal-success-image"> 
+            <p>Вы успешно отправили заявку на подписку.</p>
+            <p class="modal-info">Менеджер свяжется с вами в течение часа для уточнения деталей.</p>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

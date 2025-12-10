@@ -1,0 +1,465 @@
+/* ---------------------------------- */
+/* 🎨 Переменные Цветов (Variables) */
+/* ---------------------------------- */
+:root {
+    --vita-blue: #3C7DFF;
+    --vita-indigo: #5A4DFF;
+    --vita-gradient: linear-gradient(to right, var(--vita-blue), var(--vita-indigo));
+    --text-dark: #1F1F1F;
+    --text-light: #FFFFFF;
+    --bg-light: #F2F2F2;
+    --bg-white: #FFFFFF;
+    --bg-light-blue: #D1E0FF; /* Жұмсақ көк фон */
+}
+
+/* ---------------------------------- */
+/* 📝 Общие Стили (General Styles) */
+/* ---------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------------------------------- */
+/* 🌐 Header (Хедер) */
+/* ---------------------------------- */
+.header {
+    background-color: var(--bg-white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 110px; 
+    height: 40px;
+    margin-right: 15px; 
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 25px;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--vita-blue);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: var(--vita-blue);
+    color: var(--text-light);
+}
+
+.btn-gradient {
+    background: var(--vita-gradient); 
+    color: var(--text-light);
+}
+
+/* ---------------------------------- */
+/* ⭐️ Hero Section */
+/* ---------------------------------- */
+.hero {
+    padding: 80px 0;
+    background-color: var(--bg-light-blue);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1; 
+    max-width: 50%;
+    padding: 30px; 
+    background-color: var(--bg-white); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.hero-actions .btn {
+    margin-right: 15px;
+}
+
+.hero-images {
+    flex: 1; 
+    position: relative; 
+    height: 400px; 
+}
+
+.device-desktop {
+    position: absolute;
+    width: 85%; 
+    bottom: 0;
+    right: 0;
+    z-index: 1; 
+    transform: translateY(0); 
+}
+
+.device-phone {
+    position: absolute;
+    width: 40%; 
+    top: 50px; 
+    left: 10px;
+    z-index: 2; 
+    transform: rotate(-5deg); 
+}
+
+/* ---------------------------------- */
+/* 🛠️ Features Section */
+/* ---------------------------------- */
+.features {
+    padding: 60px 0;
+    background-color: var(--bg-white); 
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--bg-light); 
+}
+
+.feature-item h3 {
+    color: var(--vita-blue);
+    margin-bottom: 15px;
+}
+
+/* ---------------------------------- */
+/* 📜 Footer */
+/* ---------------------------------- */
+.footer {
+    padding: 20px 0;
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------- */
+/* 🔳 Модальді Терезе Стильдері (ОРТАҚ) */
+/* ---------------------------------- */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+    
+    /* АРТҚЫ ФОНДЫ БҰЛДЫРАТУ (BLUR) */
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+}
+
+.modal-content {
+    background-color: var(--bg-white);
+    margin: 15% auto; 
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 450px; 
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--text-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-modal {
+    flex: 1;
+    background-color: var(--vita-blue);
+    color: var(--text-light);
+    padding: 12px 10px;
+    font-size: 0.95rem;
+}
+
+.modal-info {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ---------------------------------- */
+/* 💰💰 Pricing Modal Styles */
+/* ---------------------------------- */
+#pricingModal .modal-content {
+    max-width: 700px; 
+    margin: 10% auto;
+}
+
+.pricing-modal-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.plan-item-modal {
+    flex: 1;
+    background-color: #F8FBFF;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #eee;
+    /* Тransitions қосу: эффектінің тегіс болуы үшін */
+    transition: all 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+.plan-item-modal.featured {
+ 
+}
+
+/* 👇👇 ТЫШҚАНДЫ АПАРҒАНДАҒЫ (HOVER) ЭФФЕКТ 👇👇 */
+.plan-item-modal:hover {
+    /* Көк рамка қосу (сіздің көк түсіңізді қолданамыз) */
+    border-color: var(--vita-blue); 
+    /* Көк түсті көлеңке қосу */
+    box-shadow: 0 8px 15px rgba(60, 125, 255, 0.2), 0 0 0 3px rgba(60, 125, 255, 0.3); 
+    /* Элементті сәл жоғары көтеру */
+    transform: translateY(-5px); 
+}
+/* 👆👆 ТЫШҚАНДЫ АПАРҒАНДАҒЫ (HOVER) ЭФФЕКТ 👆👆 */
+
+.plan-item-modal h3 {
+    color: var(--vita-blue);
+    margin-bottom: 10px;
+}
+
+.plan-item-modal .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.plan-item-modal .period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+}
+
+.plan-item-modal ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.plan-item-modal ul li {
+    padding: 5px 0;
+}
+
+.plan-item-modal .btn {
+    display: block;
+    width: 100%;
+}
+
+
+/* ---------------------------------- */
+/* 📞 Support Modal Styles */
+/* ---------------------------------- */
+#supportModal .modal-content {
+    max-width: 500px; 
+}
+
+.contact-info {
+    text-align: left;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: var(--vita-blue);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.separator {
+    color: #555;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    width: 30%; 
+}
+
+.social-icon i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* Түстерді реттеу */
+.instagram {
+    color: #E4405F; 
+    background-color: #FEEAEF;
+}
+.whatsapp {
+    color: #25D366; 
+    background-color: #EAFCF1;
+}
+.telegram {
+    color: #0088CC; 
+    background-color: #EAF6FC;
+}
+
+.social-icon:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* prob.css файлының соңына қосыңыз */
+
+/* ---------------------------------- */
+/* 🖼️ Image Modal Styles */
+/* ---------------------------------- */
+/* Үлкенірек модаль өлшемі (басқа модальдардан ерекшелену үшін) */
+.large-modal {
+    max-width: 600px; 
+    margin: 10% auto;
+}
+
+/* Модаль ішіндегі суреттің стилі */
+.modal-success-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    /* Жұмсақ көлеңке қосу */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
